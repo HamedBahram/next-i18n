@@ -1,6 +1,6 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { i18n } from '@/i18n.config'
+import { Locale, i18n } from '@/i18n.config'
 import Header from './components/header'
 
 import { Inter } from 'next/font/google'
@@ -20,7 +20,7 @@ export default function RootLayout({
   params
 }: {
   children: React.ReactNode
-  params: { lang: string }
+  params: { lang: Locale }
 }) {
   return (
     <html lang={params.lang}>
