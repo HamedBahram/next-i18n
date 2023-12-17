@@ -3,6 +3,7 @@ import { i18n, Locale } from '@/i18n.config'
 
 type CustomLinkProps = LinkProps & {
   lang: Locale;
+  children: React.ReactNode;
 };
 
 export default function CustomLink({ href, lang, ...props }: CustomLinkProps) {
