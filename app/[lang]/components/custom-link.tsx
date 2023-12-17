@@ -1,12 +1,9 @@
-import Link from 'next/link'
+import Link, { LinkProps } from 'next/link'
 import { i18n } from '@/i18n.config'
 
-interface CustomLinkProps {
-  href: string
-  lang: string
-  children: React.ReactNode
-  [key: string]: any
-}
+type CustomLinkProps = LinkProps & {
+  lang: Locale;
+};
 
 export default function CustomLink({ href, lang, ...props }: CustomLinkProps) {
   const isDefaultLang = lang === i18n.defaultLocale
